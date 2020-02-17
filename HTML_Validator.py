@@ -10,7 +10,7 @@ def validate_html(html):
     >>> validate_html('<strong>example')
     False
     '''
-    equal = True 
+    equalnum = True 
     Ltags = []
     for tag in _extract_tags(html):
         if '/' not in tag: # if it is not an end tag then add to list of tags
