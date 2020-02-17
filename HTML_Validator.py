@@ -20,7 +20,7 @@ def validate_html(html):
                 equalnum = False 
             else:
                 top = Ltags.pop()  # this line pops off last value and returns last value of a line
-                if top[2:] not in tag[1:]:  #Because an index is given, top pops out that index  
+                if top[1:] not in tag[2:]:  # the last value inserted of Ltags is not in the tag in extract then the whole thing is false. This is because these (),[] and {} go out in the order they are given in. If ({ then out order must be }). 
                     equalnum = False
                 #If elements going from index 2 onwards of the list tags is not in the list of tag 
                 #from index 1 onwards then the tags do not balance themselves out
